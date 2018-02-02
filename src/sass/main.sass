@@ -1,0 +1,298 @@
+@import url(https://fonts.googleapis.com/css?family=Lato)
+@import ~bootstrap/dist/css/bootstrap.min.css
+@import ~fullpage.js/dist/jquery.fullpage.min.css
+
+@import src/sass/variables
+@import src/sass/base_rules
+
+#main-overlay
+    height: 100%
+    width: 100%
+    display: none
+    position: fixed
+    z-index: 1040
+    top: 0
+    left: 0
+    background-color: rgb(0,0,0)
+    background-color: rgba(0,0,0, 0.9)
+    
+    .overlay-content 
+        position: relative
+        top: 25%
+        width: 100%
+        text-align: center
+        margin-top: 30px
+
+    li.active > a
+        color: #37c7a4
+    a
+        padding: 8px
+        text-decoration: none
+        font-size: 36px
+        color: #ffffff
+        display: block
+        transition: 0.3s
+
+    a:hover, a:focus
+        color: #37c7a4
+
+    .closebtn
+        position: absolute
+        top: 20px
+        right: 45px
+        font-size: 60px
+
+#pages
+    font-family: 'Lato', sans-serif;
+    font-weight: 300
+    width: 100%
+    
+#fp-nav
+    ul
+        li
+            padding: 20px 0
+            a
+                padding: 15px
+                border: 2px solid transparent
+                span
+                    height: 12px
+                    width: 12px
+                    margin: -6px 0 0 -6px
+                    background-color: $secondaryColor
+            a.active
+                border-color: $secondaryColor
+                border-radius: 20px
+
+.fancy-btn
+    font-size: 16px
+    padding: 15px 30px
+    border: 3px solid #ffffff
+    border-radius: 4px
+    background-color: transparent
+.fancy-btn-secondary
+    color: $secondaryColor
+    border-color: $secondaryColor
+
+.section
+    padding: 0
+
+#page1
+    background-image: url(/src/img/slide_1.png)
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+
+    #sec-allegri
+        margin-top: 200px
+    
+    .mt_1
+        font-family: "Times new roman"
+        color: $secondaryColor
+        font-weight: bold
+        margin: auto 0
+
+    .navbar
+        .mt
+            color: #ffffff
+            font-size: 14px
+            padding: 15px 0
+        
+        button
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-right: 15px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+
+            .icon-bar
+                display: block;
+                width: 22px;
+                height: 2px;
+                border-radius: 1px;
+                background-color: #ffffff;
+            .icon-bar+.icon-bar
+                margin-top: 4px
+    
+    .mt_2
+        color: #ffffff
+    
+    .mt_3
+        margin-top: 30px
+        a
+            color: white
+
+    .scroll-icon
+        position: absolute
+        bottom: 50px
+        text-align: center
+        div
+            height: 64px
+            width: 64px
+            margin: auto
+            background-image: url(/src/img/scroll-icon-white.png)
+        div:hover
+            background-image: url(/src/img/scroll-icon-purple.png)
+
+#page2
+    padding: 20px 50px
+
+    .section-block
+        img
+            width: 100%
+
+        h2
+            color: $secondaryColor
+            font-weight: bold
+            width: 100%
+            z-index: 2
+            position: absolute
+        
+        p
+            margin-top: 110px
+            color: #aaaaaa
+
+    .section-block:nth-child(odd)
+        h2
+            margin-left: -10%
+    .section-block:nth-child(even)
+        h2
+            margin-left: 10%
+
+#page3
+    .carousel
+        padding: 0
+
+        .carousel-indicators > li
+            background-color: grey
+            border-color: grey
+        
+        .carousel-indicators > li.active
+            background-color: $secondaryColor
+            border-color: $secondaryColor
+        
+        .carousel-caption
+            padding-bottom: 100px
+            p
+                font-size: 20px
+                font-weight: lighter
+            p.who
+                font-size: 10px
+        .img-slide
+            width: 100%;
+    .mt_1
+        color: $secondaryColor
+        margin: 30px 0
+    
+    .mt_2
+        padding: 30px
+
+        div
+            margin-bottom: 15px
+        
+        img
+            width: 100%
+        .overlay
+            position: absolute
+            display: none
+            height: 100%
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: rgba(0,0,0,0.5)
+            z-index: 2
+            cursor: pointer
+            margin: 0 15px
+            .o-number
+                position: absolute;
+                top: 20px
+                left: 20px
+                color: $secondaryColor
+                font-size: 30px
+                border: 2px solid $secondaryColor
+                border-radius: 25px
+                line-height: 45px
+                height: 50px
+                width: 50px
+                padding: 0 13px
+            .o-title
+                position: absolute;
+                bottom: 50px
+                color: $secondaryColor
+                font-size: 14px
+                font-style: italic
+                padding: 0 15px
+            .o-subtitle
+                position: absolute;
+                bottom: 15px
+                font-size: 24px
+                font-weight: bold
+                color: #ffffff
+                padding: 0 15px
+
+#page4
+    .newsletter
+        min-height: 300px
+        color: #ffffff
+        background-color: black
+        background-image: url(/src/img/teeth.png)
+        background-position: top center
+        background-repeat: no-repeat
+        .mt_1
+            font-size: 36px
+            padding: 50px 0
+        .mt_2
+            font-family: "Times new roman"
+            font-style: italic
+            font-size: 24px
+            margin-top: 50px
+        .mt_3
+            padding: 20px
+            div
+                margin-bottom: 15px
+            input[type=text]
+                height: 50px
+    .footer
+        .mt_1
+            margin-top: 50px
+        .mt_3
+            margin-top: 50px
+        .mt_4
+            margin-top: 40px
+
+@media(max-width:768px)
+    #page1
+        #sec-allegri
+            margin-top: 0
+        .scroll-icon
+            position: relative
+            top: 10px
+
+    #page2
+        .section-block:nth-child(even)
+            h2
+                margin-left: 0
+        .section-block:nth-child(odd)
+            h2
+                margin-left: 0
+
+    #page3
+        .carousel
+            .carousel-inner
+                .item
+                    min-height: 150px
+                    .img-slide
+                        min-height: 150px
+                .carousel-caption
+                    min-height: 150px
+                    padding-bottom: 0
+
+@media(max-height:600px)
+    #page1
+        .scroll-icon
+            position: relative
+            top: 10px
+        
